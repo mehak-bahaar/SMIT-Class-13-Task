@@ -1,0 +1,132 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background-color: #faf9fa;
+    height: 80vh;
+}
+
+.left {
+    padding: 20px;
+}
+
+.left h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.form-group-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    grid-column: 1 / -1;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #73a85f;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    background-color: #73a85f;
+    color: #fff;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+    grid-column: 1 / -1;
+    justify-self: start;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #5c8d4a;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+@media (max-width: 968px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    form {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group-input {
+        grid-column: 1 / -1;
+    }
+}
